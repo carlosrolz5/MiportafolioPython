@@ -1,0 +1,1 @@
+En este proyecto, hay ejercicios diarios como el analizador de texto, que muestra informacion de un texto como su cantidad de letras y su primer letra, y una calculadora de comisiones que calcula el total de una monto ingresado segun el porcenta de comision ingresado. 
