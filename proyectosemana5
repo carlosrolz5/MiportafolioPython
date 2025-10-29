@@ -6,7 +6,7 @@
 
 import random
 letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-palabras = ["banana", "naranja", "bicicleta", "manzana", "tijeras", "zanahoria", "lechuga", "cebolla", "remolacha", "tomate", "perro", "serpiente", "avestruz", "lagartija", "ardilla", "armadillo", "gorila", "hormiga", "mariposa", "libelula", "lombriz", "pavorreal", "aguila", "gaviota", "cangrejo", "langosta", "dinosaurio", "iguana", "renacuajo", "tiburon", "tortuga", "mantarraya", "escarabajo", "ciempies", "camaleon", "escorpion", "herizo"]
+palabras = ["banana", "naranja", "bicicleta", "manzana", "tijeras", "zanahoria", "lechuga", "cebolla", "remolacha", "tomate", "perro", "serpiente", "avestruz", "lagartija", "ardilla", "armadillo", "gorila", "hormiga", "mariposa", "libelula", "lombriz", "pavorreal", "aguila", "gaviota", "cangrejo", "langosta", "dinosaurio", "iguana", "renacuajo", "tiburon", "tortuga", "mantarraya", "escarabajo", "ciempies", "camaleon", "escorpion", "erizo"]
 palabra = random.choice(palabras)
 espacios = ""
 for letra in palabra:
