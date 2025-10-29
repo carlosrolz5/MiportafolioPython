@@ -1,14 +1,19 @@
 import random
-
+#ingresar nombre usuario
 nombre = input("ingresa tu nombre: ")
+#generar numero entre 1 y 100
 
 print(f"Bueno, {nombre}, he pensado en un numero entre 1 y 100, y tienes solo ocho intentos para adivinar cuál crees que es el número\n")
+
+
+#funcion de juego
 def juego(min, max):
     num = random.randint(min, max)
     i = 0
-
+#lista de nums ingresados
     numsIngresados = []
     while(True):
+        #try/catch mientras true sea cierto
         try:
             num_adivinado = int(input("Ingresa el numero que crees que es: "))
             if (num_adivinado < min or num_adivinado > max):
