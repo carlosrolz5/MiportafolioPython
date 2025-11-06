@@ -9,6 +9,7 @@ Espero que los disfrutes
 #Deja ingresar un texto y lo convierte a minuscula
 texto = input("Ingresa un texto: ")
 
+#ingresar tres letras
 l1 = input("Ingresa una letra: ").lower()
 
 l2 = input("Ingresa una letra: ").lower()
