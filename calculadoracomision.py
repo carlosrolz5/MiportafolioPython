@@ -1,3 +1,7 @@
+
+
+#Esta es una calculadora de comisiones que hace calculos como calcular el porcentaje de comision segun datos ingresados
+
 #titulo con cuarenta asteriscos
 print("*" * 40)
 print("BIENVENIDO A LA CALCULADORA DE COMISIONES")
