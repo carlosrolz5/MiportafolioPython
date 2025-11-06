@@ -5,49 +5,70 @@
 
 
 import random
+#cada letra del alfabeto en una lista
 letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+#lista de palabras
 palabras = ["banana", "naranja", "bicicleta", "manzana", "tijeras", "zanahoria", "lechuga", "cebolla", "remolacha", "tomate", "perro", "serpiente", "avestruz", "lagartija", "ardilla", "armadillo", "gorila", "hormiga", "mariposa", "libelula", "lombriz", "pavorreal", "aguila", "gaviota", "cangrejo", "langosta", "dinosaurio", "iguana", "renacuajo", "tiburon", "tortuga", "mantarraya", "escarabajo", "ciempies", "camaleon", "escorpion", "erizo"]
+#palabra aleatoria
 palabra = random.choice(palabras)
+#variable que va a contener espacios bajos (cada letra de la palabra es un espacio)
 espacios = ""
+
 for letra in palabra:
     espacios += "-"
+#lista de letras adivinadas
 letras_adivinadas = []
+#intentos restantes, inicialmente 7
 intentos_restantes = 7
+
 print(espacios)
-#print(list(palabra)[0])
+#corre el programa hasta que se adivine la palabra o se acaben los intentos
 while True:
+#ingresar letra
     letra = input("Ingresa una letra: ")
+#condiciones: solo se puede ingresar una sola letra, que debe ser del abecedario y que no este en la lista (no se puedo haber adivinado antes)
     condicion1 = len(letra) == 1
     condicion2 = letra.upper() in letras
     condicion3 = letra.upper() not in letras_adivinadas
     if(condicion1 and condicion2 and condicion3):
+#agregar la letra en mayuscula (si esta en minuscula se convierte a mayuscula) a la lista
         letras_adivinadas.append(letra.upper())
+#si la palabra no contiene la letra ingresada, la cantidad de intentos decrece
         if letra.lower() not in list(palabra):
             intentos_restantes -= 1
             print(f"Te queda(n) {intentos_restantes} intento(s)")
             print(espacios)
-
+        #si la palabra contiene la letra ingresada
         else:
+            #convertir variable de palabra y espacios a lista
             palabra = list(palabra)
             espacios = list(espacios)
+            #recorrer lista de palabra para hacer que cada espacio sea reemplaza por la letra ingresada cuando aparezca en la palabra
             for i in range(len(palabra)):
                 if(palabra[i] == letra.lower()):
                     espacios[i] = letra.lower()
+            #mostrar lista como cadena
             espacios = "".join(espacios)
-            print(espacios)l
+            print(espacios)
+            #cantidad de intentos restantes
             print(f"Te queda(n) {intentos_restantes} intento(s)")
 
 
     else:
+        #si se ingresa una letra que ya fue ingresada
         print("Solamente se puede ingresar una letra que no se haya ingresado antes")
+    #se pierde si se queda el jugador sin intentos
     perdido = intentos_restantes == 0
+    #se gana si la variable de espacios se convierte en la palabra
     ganado = list(espacios) == list(palabra)
+    #se acaba el juego si se gana o se pierde
     if(ganado or perdido):
         break
+#se imprime la palabra como cadena
 print("".join(palabra))
-
+#si se gana
 if(ganado):
     print("🎉Felicidades, ganaste")
-
+#si se pierde
 else:
     print("👎Lo siento, perdiste")
