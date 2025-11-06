@@ -1,9 +1,7 @@
 # Hola 
 ## Soy Carlos
 
-Esta es una serie de algoritmos creados en Python
-
-Espero que los disfrutes
+#Este es un analizador de texto que realiza acciones como contar la cantidad de letras
 
 ---
 #Deja ingresar un texto y lo convierte a minuscula
