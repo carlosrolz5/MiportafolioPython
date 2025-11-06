@@ -1,4 +1,8 @@
 import random
+
+#Este es un juego donde se debe adivinar un numero aleatorio entre 1 y 100, con siete intentos y pistas de "muy bajo" o "muy alto"
+
+
 #ingresar nombre usuario
 nombre = input("ingresa tu nombre: ")
 #generar numero entre 1 y 100
