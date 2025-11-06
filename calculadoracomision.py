@@ -1,4 +1,4 @@
-#titulo
+#titulo con cuarenta asteriscos
 print("*" * 40)
 print("BIENVENIDO A LA CALCULADORA DE COMISIONES")
 print("*" * 40)
