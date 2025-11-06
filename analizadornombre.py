@@ -1,3 +1,7 @@
+
+#Este es un programa donde se ingresa el nombre y el apellido y se hacen acciones como mostrar una version divertida 
+
+
 #ingresar nombre y apellido
 nombre = input("Ingresa tu nombre: ")
 apellido = input("Ingresa tu apellido: ")
